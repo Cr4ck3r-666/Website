@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body 
+{
+    font-family: 'Orbitron', monospace;
+    color: #00ff00;
+    background: #000;
+    overflow: hidden;
+    height: 100vh;
+}
+
+#matrix-canvas 
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.content 
+{
+    position: relative;
+    z-index: 120;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+h1 
+{
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 900;
+    text-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00;
+    margin-bottom: 1rem;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+p 
+{
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.cta-button 
+{
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    background: rgba(0, 255, 0, 0.2);
+    border: 2px solid #00ff00;
+    color: #00ff00;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+    animation: pulse 2s infinite;
+    margin: 10px;
+}
+
+.cta-button:hover 
+{
+    background: rgba(0, 255, 0, 0.4);
+    box-shadow: 0 0 40px #00ff00;
+    transform: translateY(-5px);
+}
+
+@keyframes glow 
+{
+    from 
+    {
+        text-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00;
+    }
+
+    to 
+    {
+        text-shadow: 0 0 30px #00ff00, 0 0 60px #00ff00, 0 0 80px #00ff00;
+    }
+}
+
+@keyframes pulse 
+{
+
+    0%,
+    100% 
+    {
+        transform: scale(1);
+    }
+
+    50% 
+    {
+        transform: scale(1.05);
+    }
+}
+
+.terminal 
+{
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid #00ff00;
+    padding: 1rem;
+    font-size: 0.9rem;
+    max-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+}
+
+.terminal::before 
+{
+    content: "C:\FUTURE> ";
+    color: #00ff41;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink 
+{
+
+    0%,
+    50% 
+    {
+        opacity: 1;
+    }
+
+    51%,
+    100% 
+    {
+        opacity: 0;
+    }
+}
+
+@media (max-width: 768px) 
+{
+    .terminal 
+    {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        margin: 2rem;
+    }
+}
+
+hr 
+{
+    color: #00ff00;
+    width: 50%;
+    height: auto;
+}
