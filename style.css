@@ -13,6 +13,60 @@ body {
     height: auto;
 }
 
+hr {
+    color: #00ff00;
+    width: 90%;
+    height: auto;
+    margin: 20px;
+}
+
+h1 
+{
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 700;
+    text-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00;
+    margin-bottom: 1rem;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+h2
+{   
+    font-size: xx-large;
+    text-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00;
+}
+
+h3
+{   
+    font-size: x-large;
+    text-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00;
+}
+
+h4
+{   
+    font-size: large;
+    text-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00;
+}
+
+h5
+{   
+    font-size: medium;
+    text-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00;
+}
+
+p {
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    max-width: 2000px;
+    line-height: 1.6;
+}
+
+li
+{
+    max-height: 1000px;
+    max-width: 2000px;
+    color: #00ff00;
+}
 #matrix-canvas {
     position: fixed;
     top: 0;
@@ -32,22 +86,6 @@ body {
     text-align: center;
     backdrop-filter: blur(10px);
     background: rgba(0, 0, 0, 0.3);
-}
-
-h1 {
-    font-size: clamp(3rem, 8vw, 6rem);
-    font-weight: 900;
-    text-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00;
-    margin-bottom: 1rem;
-    animation: glow 2s ease-in-out infinite alternate;
-}
-
-p {
-    font-size: clamp(1.2rem, 3vw, 1.8rem);
-    margin-bottom: 2rem;
-    opacity: 0.9;
-    max-width: 600px;
-    line-height: 1.6;
 }
 
 .cta-button {
@@ -134,9 +172,3 @@ p {
     }
 }
 
-hr {
-    color: #00ff00;
-    width: 50%;
-    height: auto;
-    margin: 20px;
-}
